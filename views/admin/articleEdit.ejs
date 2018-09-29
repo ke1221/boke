@@ -1,0 +1,85 @@
+<% include header %>
+
+	<section class="element-page">
+	    <div class="container">
+			<h2 class="text-center">编辑文章</h2>
+			<hr class="hr-mid">
+			<section class="form-section">
+		  		<h3>修改信息</h3>
+		  		<form action="/admin/articleUpdate" method="post">
+					<fieldset>
+			  			<div class="row">
+							<input type="hidden" name="_id" value="<%= data._id %>">
+			  				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			  					<label>文章标题</label>
+			  					<input type="text" name="title" value="<%= data.title %>">
+			  				</div>
+
+			  				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			  					<label>文章作者</label>
+								<input type="text" name="author" value="<%= data.author %>">
+			 				</div>
+
+			 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			 					<label>文章描述</label>
+								<input type="text" name="description" value="<%= data.description %>">
+			 				</div>
+
+			 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			 					<label>关键字</label>
+								<input type="text" name="keywords" value="<%= data.keywords %>">
+			 				</div>
+
+							
+
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label>文章分类</label>
+								<select id="select" name="itemId">
+								  	<% items.forEach(function(val){ %>
+								  		<option <%=val._id.toString()==data.itemId?'selected':''%>  value="<%=val._id%>">
+								  			<%= val.name %>
+								  		</option> 
+								  	<% }) %> 
+								</select>
+							</div> 
+			  				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			  					<label>文章内容</label>
+								<textarea rows="14" id="comment"  name="content"><%= data.content %></textarea>
+			  				</div> 
+			  			</div>
+			  			<button type="submit" class="btn btn-default">发布更新</button>
+			  			<button type="reset" class="btn btn-default">清空重写</button>
+					</fieldset>
+		  		</form>
+				
+				<h3>修改封面</h3>
+
+				<hr class="line-full">
+
+		  		<form action="/admin/imageUpdate" method="post" enctype="multipart/form-data">
+					<fieldset>
+			  			<div class="row">
+							<input type="hidden" name="_id" value="<%= data._id %>">
+			  				
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<img src="/<%= data.imgurl %>" onerror="this.src='/img/001.jpeg';this.onerror=null" class="img-circle img-responsive">
+							</div>
+							
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<input type="file" name="imgurl">
+								<button type="submit" class="btn btn-default">更换封面</button>
+							</div>
+			  			</div>
+			  			
+			  			
+					</fieldset>
+		  		</form>
+			</section>
+
+		<hr class="line-full">		
+	</section>
+
+
+
+<% include footer %>
+

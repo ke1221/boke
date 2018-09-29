@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- META DATA -->
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free Bootstrap Themes by HTML5XCSS3 dot com - Free Responsive Html5 Templates">
+    <meta name="author" content="#">
+
+	<title>WOW</title>
+  
+	<!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"  type="text/css">
+	
+	<!-- Owl Carousel Assets -->
+    <link href="/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Custom Fonts -->
+    <link rel="stylesheet" href="/font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+ <body class="index-page">
+
+	<!-- /////////////////////////////////////////Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="/">WoW</a>
+            </div>
+
+            <!-- 顶部导航 -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li>
+                        <a class="page-scroll" href="#">首页</a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="/admin"><%-user.name %></a>
+                    </li>
+
+
+                    <% items.forEach(function(val){ %>
+					<li>
+                        <a class="page-scroll" href="/itemList/<%= val.id %>"><%= val.name %></a>
+                    </li>
+					<% }) %>
+
+                    <li>
+                        <a class="page-scroll" href="/admin/login">登录</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/admin/adminAdd">注册</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 顶部导航 END -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+	<!-- Navigation -->
+
+	<!-- CAROUSEL -->
+
+
+	<div id="carousel-example-generic" class="carousel slide hidden-xs " data-ride="carousel" data-interval="4000">
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="/img/banner1.jpg" alt="...">
+				<!-- Static Header -->
+				<div class="container">
+				<div class="header-text hidden-xs">
+					<div class="col-md-12 text-center zhuye">
+						<h1>我将一切回忆掩埋，只想拥有一个美好的未来。</h1>
+						<hr>
+						<p>曾经你是我最美丽的初恋，如今却是我无法忘记的记忆，为何佛祖不能给我们那美丽的结局？却让我一生长相忆！</p>
+						<a href="" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+					</div>
+				</div><!-- /header-text -->
+				</div>
+			</div>
+			<div class="item">
+				<img src="/img/banner2.jpg" alt="...">
+				<!-- Static Header -->
+				<div class="header-text hidden-xs">
+					<div class="col-md-12 text-center">
+						<h1>过去的日子即使夹着风尘却也觉得美好</h1>
+						<hr>
+						<p>童话里的结局永远都是美好的，而我的童话结局永远只有我一个人和你离去背影</p>
+						<a href="#" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+					</div>
+				</div><!-- /header-text -->
+			</div>
+			
+		</div>
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div> 
+	<!-- Carousel -->
+	
+
+	<header class="container">
+		
+		<div class="site-branding">
+			<h1 class="site-title">
+				<a href="index.html">
+					<span>Good for the rest </span>
+				</a>
+			</h1>
+			<h2 class="site-description">The rest of your life has you</h2>
+		</div>
+		<div class="social-links">
+			<ul class="list-inline">
+				<li><a href="#"><i class="fa fa-font"></i></a></li>
+				<li><a href="#"><i class="fa fa-italic"></i></a></li>
+				<li><a href="#"><i class="fa fa-lock"></i></a></li>
+				<li><a href="#"><i class="fa fa-book"></i></a></li>
+			</ul>
+		</div>
+		
+	</header>
+    
+	
+	<!-- 内容开始 -->
+	<div id="page-content">
+	
+		<!-- ////////////Content Box 01 -->
+		<section class="box-content box-1">
+			<div class="container">

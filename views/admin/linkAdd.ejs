@@ -1,0 +1,42 @@
+<% include header %>
+
+	<section class="element-page">
+	    <div class="container">
+			<h2 class="text-center">添加链接</h2>
+			<hr class="hr-mid">
+			<section class="form-section">
+		  		<h3>链接信息</h3>
+		  		<form action="/admin/linkInsert" method="post" >
+					<fieldset>
+			  			<div class="row">
+
+			  				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			  					<label>链接描述</label>
+			  					<input type="text" name="title" placeholder="链接描述">
+			  				</div>
+
+			  				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			  					<label>链接名称</label>
+								<input type="text" name="name" placeholder="链接名称">
+			 				</div>
+
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<label>链接地址</label>
+								<input type="text" name="link" placeholder="链接地址">
+							</div>
+							
+			  				
+			  			</div>
+			  			<button type="submit" class="btn btn-default">添加链接</button>
+			  			<button type="reset" class="btn btn-default">清空重写</button>
+					</fieldset>
+		  		</form>
+			</section>
+
+		<hr class="line-full">		
+	</section>
+
+
+
+<% include footer %>
+

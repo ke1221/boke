@@ -1,0 +1,34 @@
+<!-- 引入公用头部 -->
+<% include header %>
+
+	<!-- 第一列 -->
+	
+	<% items.forEach(function(val){ %>
+	<div class="col-md-4 col-sm-6 col-xs-12">
+		
+		<div class="box-item">
+			<div class="content" height="100%">
+				
+				<h3><span>分类 - -</span><b><a href="/itemList/<%= val.id %>"><%= val.name %></a></b></h3>
+				<% val.articlelist.forEach(function(articledata){ %>
+				<img src="../<%= articledata.imgurl %>" onerror="this.src='/img/001.jpeg';this.onerror=null" class="img-responsive"/>
+
+				<h3 style="overflow: hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;"><span>标题 - -</span><%= articledata.title %></h3>
+				
+				<p style="overflow: hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;"><%= articledata.content %></p>
+				<a href="/content/<%= articledata._id %>">阅读全文...</a>
+				<br><br>
+				<span><%= articledata.ctime.toString() %></span><br>
+				<% }) %>
+				
+			</div>
+		</div>
+	</div>
+	<% }) %>
+	
+	<!-- 第一列 END -->
+
+
+
+<!-- 引入公用底部 -->
+<% include footer %>

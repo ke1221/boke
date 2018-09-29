@@ -1,0 +1,40 @@
+<% include header %>
+
+<div class="row why-div">
+  	<div class="text-center">
+        <h2>分类列表</h2>
+  	</div>
+    <hr class="hr-mid">
+    <div class="sub-text text-center">
+        <p class="font-1">
+        	这里可以查看和编辑 分类 
+     	</p>
+    </div>
+</div>
+
+<table class="table">
+	<tr>
+		<th>栏目排序</th>
+		<th>栏目名称</th>
+		<th>栏目简介</th>
+		<th>创建时间</th>
+		<th>栏目编辑</th>
+	</tr>
+	
+	<% items.forEach(function(val,i){ %>
+	<tr>
+		<td><%= val.order %></td>
+		<td><%= val.name %></td>
+		<td><%= val.info %></td>
+		<td><%= val.ctime.toLocaleString() %></td>
+		<td>
+			<a href="/admin/itemEdit/<%=val._id%>">编辑</a>
+			|
+			<a href="/admin/itemRemove/<%=val._id%>">删除</a>
+		</td>
+	</tr>
+	<% })%>		
+	
+</table>
+
+<% include footer %>

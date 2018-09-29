@@ -1,0 +1,93 @@
+				</div>
+			</div>
+		</section>
+	</div>
+	<!-- 内容结束 END -->
+	
+	<!-- FOOTER -->
+	<footer>
+		<div class="wrap-footer">
+			<div class="container">
+				<div class="row"> 
+					<div class="col-footer col-md-4">
+						<h2 class="footer-title">友情链接</h2>
+						<!-- <%= link %> -->
+						<nav>
+							<% link.forEach(function(val){ %>
+
+								<a href="<%=val.link%>" title="<%=val.title%>"><%=val.name%></a> | 
+
+							<% })%>
+						</nav>
+						
+					</div> 
+					
+
+					<div class="col-footer col-md-4">
+						<h2 class="footer-title">联系</h2>
+						
+						<p>微信： ke1221 </p>
+						<p>QQ  ： 543909943 </p>
+						<p>邮箱： ke1221@qq.com </p>
+					</div>
+
+					<div class="col-footer col-md-4">
+						<h2 class="footer-title">搜索</h2>
+						
+						<form>
+							<input type="text" name="your-name" size="40" placeholder="搜索内容" />
+							<input type="submit" value="SUBSCRIBE" class="btn btn-skin" onclick=" return false "/>
+						</form>
+					</div>
+
+				
+
+				</div>
+
+			</div>
+		</div>
+		<div class="bottom-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<p>More Templates <a href="http://www.ke1221.cn/" target="_blank" title="王可">王可</a> - Collect from <a href="http://www.ke1221.cn/" title="微信ke1221" target="_blank">王可</a></p>
+					</div>
+					<div class="col-md-4">
+						<ul class="list-inline social-buttons">
+							<li><a href="#"><i class="fa fa-twitter"></i></a>
+							</li>
+							<li><a href="#"><i class="fa fa-facebook"></i></a>
+							</li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a>
+							</li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul class="list-inline quicklinks">
+							<li><a href="#">Privacy Policy</a>
+							</li>
+							<li><a href="#">Terms of Use</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+  
+	<!-- jQuery -->
+	<script type="text/javascript" src="/js/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	
+	<!-- Custom Theme JavaScript -->
+	<script src="/js/agency.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="/js/jquery.easing.min.js"></script>
+	<script src="/js/classie.js"></script>
+	<script src="/js/cbpAnimatedHeader.js"></script>
+	
+</body>
+</html>

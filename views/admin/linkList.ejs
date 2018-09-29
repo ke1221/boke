@@ -1,0 +1,40 @@
+<% include header %>
+
+<div class="row why-div">
+  	<div class="text-center">
+        <h2>友链列表</h2>
+  	</div>
+    <hr class="hr-mid">
+    <div class="sub-text text-center">
+        <p class="font-1">
+        	这里可以查看和编辑 友情链接
+     	</p>
+    </div>
+</div>
+
+<table class="table">
+	<tr>
+		<th>链接描述</th>
+		<th>链接名称</th>
+		<th>链接地址</th>
+		<th>创建时间</th>
+		<th>链接管理</th>
+	</tr>
+	
+	<% links.forEach(function(val){ %>
+	<tr>
+		<td><%= val.title %></td>
+		<td><%= val.name %></td>
+		<td><%= val.link %></td>
+		<td><%= val.ctime.toLocaleString() %></td>
+		<td>
+			<a href="/admin/linkEdit/<%=val._id%>">编辑</a>
+			|
+			<a href="/admin/linkRemove/<%=val._id%>">删除</a>
+		</td>
+	</tr>
+	<% })%>		
+	
+</table>
+
+<% include footer %>

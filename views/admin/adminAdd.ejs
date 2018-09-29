@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>注册</title>
+<link rel="stylesheet" media="screen" href="/css/zhuce.css" />
+</head>
+<style>
+	nav{
+		margin: 0 auto;
+	}
+</style>
+<form id="msform" action="/admin/adminInsert" method="post">
+	<fieldset>
+		<h2 class="fs-title">用户注册</h2>
+		<h3 class="fs-subtitle">填写信息</h3>
+		<input type="text" name="name" placeholder="用户名" autocomplete="off">
+		<input type="password" name="password" placeholder="密码" autocomplete="off"/>
+		<input type="password" name="repassword" placeholder="重复密码" />
+		<input type="text" name="info" placeholder="简介" autocomplete="off"/>
+		<input type="text" name="tel" placeholder="手机" autocomplete="off"/>
+		<input type="reset" class="previous action-button" value="重置" />
+		<input type="submit" class="submit action-button" value="提交" />
+	</fieldset>
+</form>
+
+
+<script>
+	window.onload = function(){
+		var input = document.querySelectorAll('input');
+		for(var i = 0; i < input.length; i++){
+			if(input[i].value == ''){
+				retrun false;
+			}
+		}
+
+		input[2].onblur = function(){
+			if(this.value != input[1].value){
+				alert('两次输入密码不一致');
+				this.value = '';
+				input[1].value = '';
+			}
+		}
+	}
+</script>
+</body>
+</html>

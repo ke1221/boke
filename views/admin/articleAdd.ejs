@@ -1,0 +1,62 @@
+<% include header %>
+
+	<section class="element-page">
+	    <div class="container">
+			<h2 class="text-center">发表文章</h2>
+			<hr class="hr-mid">
+			<section class="form-section">
+		  		<h3>填写信息</h3>
+		  		<form action="/admin/articleInsert" method="post" enctype="multipart/form-data">
+					<fieldset>
+			  			<div class="row">
+
+			  				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			  					<label>文章标题</label>
+			  					<input type="text" name="title" autocomplete="off"  placeholder="文章标题">
+			  				</div>
+
+			  				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			  					<label>文章作者</label>
+								<input type="text" name="author" autocomplete="off"  placeholder="作者">
+			 				</div>
+
+			 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			 					<label>文章描述</label>
+								<input type="text" name="description" autocomplete="off"  placeholder="描述">
+			 				</div>
+
+			 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			 					<label>文章关键字</label>
+								<input type="text" name="keywords" autocomplete="off"  placeholder="关键字">
+			 				</div>
+
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<label>文章封面</label>
+								<input type="file" name="imgurl">
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<label>文章分类</label>
+								<select id="select" name="itemId">
+								  	<% items.forEach(function(val){ %>
+								  		<option value="<%=val._id%>"><%=val.name%></option> 
+								  	<% }) %> 
+								</select>
+							</div> 
+			  				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			  					<label>文章内容</label>
+								<textarea rows="14" id="comment" placeholder="填写内容" name="content"></textarea>
+			  				</div> 
+			  			</div>
+			  			<button type="submit" class="btn btn-default">发布文章</button>
+			  			<button type="reset" class="btn btn-default">清空重写</button>
+					</fieldset>
+		  		</form>
+			</section>
+
+		<hr class="line-full">		
+	</section>
+
+
+
+<% include footer %>
+

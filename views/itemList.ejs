@@ -1,0 +1,138 @@
+    <!DOCTYPE HTML>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title><%- user.name %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Styles -->
+    <link href="/item/css/bootstrap.css" rel="stylesheet">
+    <link href="/item/css/style.css" rel="stylesheet">
+    <link href="/item/css/fontello.css" type="text/css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <style>
+    body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+    </style>
+    <link href="/item/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/img/logo.png">
+    <script type="text/javascript" src="/item/js/jquery.js"></script>
+    <script type="text/javascript" src="/item/js/jquery.scrollTo-1.4.2-min.js"></script>
+  
+    <script type="text/javascript" src="/item/js/jquery.localscroll-1.2.7-min.js"></script>
+    
+   
+    </head>
+    <body>
+
+    <div class="navbar-wrapper">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+            <h1 class="brand"><a href="/">WoW</a></h1>
+            
+            <nav class="pull-right nav-collapse collapse">
+              <ul id="menu-main" class="nav">
+                <li><a href="/">首页</a></li>
+                <li><a href="/admin/login">登录</a></li>
+                <li><a href="/admin/adminAdd">注册</a></li>
+                <li><a href="/admin/logOut">退出登录</a></li>
+              </ul>
+            </nav>
+          </div>
+        
+        </div>
+      
+      </div>
+    
+    </div>
+  
+    <!-- <div id="top"></div> -->
+
+    <hr>
+    <div id="top"></div>
+    <section id="portfolio" class="single-page scrollblock">
+      <div class="container">
+        <div class="align">
+            <h1 id="folio-headline" style="color: red"><%= items.name %></h1>
+        </div>
+
+            <h1 id="folio-headline">文章列表</h1>
+
+        
+
+        
+
+       
+    <div class="row">
+
+    <% data.forEach(function(val,i){ %>
+
+        <div class="span4">
+            <div class="mask2"> 
+                <a href="/content/<%= val._id %>" rel="prettyPhoto"><img src="../<%= val.imgurl %>" onerror="this.src='/img/001.jpeg';this.onerror=null" alt=""></a> 
+            </div>
+            <div class="inside">
+                <hgroup>
+                    <h2><%= i+1 %>·<%= val.title %></h2>
+                </hgroup>
+                <div class="entry-content">
+                    <p style="overflow: hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;"><%= val.content %></p>
+                
+                    <a class="more-link" href="/content/<%= val._id %>">阅读全文</a> <span class="more-link"><%= val.author %></span> 
+                </div>
+            </div>
+        
+        </div>
+    <% }) %> 
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="span4"></div>
+        <div class="span4">
+            <nav aria-label="Page navigation">
+                
+                   <a href="/itemList/<%= items._id %>?page=1">首页</a>
+                    
+                      <a href="/itemList/<%= items._id %>?page=<%= page - 1 %>">
+                        <span>上一页</span>
+                      </a>
+                   
+                 
+                    <% for(var i=1;i<=maxPage;i++){ %>
+                        <a href="//itemList/<%= items._id %>?page=<%= i %>"><%= i %></a>
+                    <% } %>
+                
+                 
+                      <a href="/itemList/<%= items._id %>?page=<%= -(- page - 1) %>">下一页</a>
+                    
+                
+                <a href="/itemList<%= items._id %>?page=<%= maxPage %>">尾页</a>
+              
+            </nav>           
+        </div>
+        <div class="span4"></div>
+    </div> 
+    </section>
+    <hr>
+    
+    <a href="#top" class="top">顶部</a>
+
+    <hr>
+
+
+    <!-- Loading the javaScript at the end of the page -->
+    <script type="text/javascript" src="/item/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/item/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="/item/js/site.js"></script>
+
+
+	</body>
+	</html>
