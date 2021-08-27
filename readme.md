@@ -26,7 +26,7 @@
 		分页功能 
 
 
-##项目结构
+## 项目结构
 	-|bin/							启动项目录
 	-|--|www 						启动文件
 	-|configs/						配置文件目录
@@ -81,7 +81,7 @@
 	-|app.js 						项目入口文件
 	-|package.json 					项目的配置文件
 
-##用到的模块
+## 用到的模块
 	mongoose						数据库模块
 	captchapng 						验证码模块 code
 	express-session					cookie session模块
@@ -90,7 +90,7 @@
 	time-stamp 						时间模块
 	uid 							生成唯一标识 （用于给图片命名）
 
-##用户 数据集合骨架
+## 用户 数据集合骨架
  	name  :  String,	//账号
 	password:String,	//密码
 	info  :  String,	//简介
@@ -100,7 +100,7 @@
 		default: new Date()
 	}
 
-##文章 数据集合骨架
+## 文章 数据集合骨架
 	itemId : {
 		type: 'ObjectId',
 		// 关联的集合
@@ -117,7 +117,7 @@
 		default: new Date()
 	}
 
-##分类 数据集合骨架
+## 分类 数据集合骨架
 	name : String,  	// 栏目名称
 	info : String,		// 栏目简介
 	ctime: {
@@ -126,7 +126,7 @@
 	},
 	order: Number,		// 排序
 	
-##友链 数据集合骨架
+## 友链 数据集合骨架
 	name  :  String,	//名称
 	title :  String,	//描述
 	link  :  String,	//链接
